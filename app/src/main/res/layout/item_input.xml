@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/lblInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="title input"
+        style="@style/TextView.Regular14spGrey"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constInput"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="@drawable/bg_textbox"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/lblInput"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/lblSuffix"
+            style="@style/TextView.Regular16spWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinnerSuffix"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:spinnerMode="dropdown"
+            android:dropDownWidth="match_parent"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toBottomOf="@+id/lblSuffix"
+            app:layout_constraintLeft_toLeftOf="@+id/lblSuffix"
+            app:layout_constraintRight_toRightOf="@+id/lblSuffix"/>
+
+        <ImageView
+            android:id="@+id/imgInputType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/lblSuffix"
+            app:layout_constraintRight_toLeftOf="@+id/txtInput"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <EditText
+            android:id="@+id/txtInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:background="@android:color/transparent"
+            android:importantForAutofill="no"
+            style="@style/TextView.Regular16spBlack"
+            android:textColorHint="@color/color_text_secondary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/imgInputType"
+            app:layout_constraintRight_toLeftOf="@+id/lblInputValue"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="LabelFor,TextFields" />
+
+        <TextView
+            android:id="@+id/lblInputValue"
+            style="@style/TextView.Regular16spWhite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/darker_gray"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/txtInput"
+            app:layout_constraintRight_toLeftOf="@+id/imgInputAction"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgInputAction"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/ic_search_white"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/lblInputValue"
+            app:layout_constraintRight_toLeftOf="@+id/cbPassword"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/imgClearText"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="11dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription"
+            android:visibility="gone" />
+
+        <CheckBox
+            android:id="@+id/cbPassword"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="10dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/imgInputAction"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/lblAlert"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/color_text_secondary"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constInput"
+        tools:text="title input" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

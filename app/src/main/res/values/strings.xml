@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Suitmedia App</string>
+    <string name="welcome">Welcome</string>
+    <string name="this_test">This is app for suitmedia mobile developer test</string>
+    <string name="hallo">Hallo,</string>
+    <string name="name">Arman!</string>
+    <string name="next">Next</string>
+    <string name="check">Check</string>
+    <string name="copyright">Copyright @ 2020 Suitmedia All Rights Reserved.</string>
+    <string name="choose_event">Choose Event</string>
+    <string name="choose_guest">Choose Guest</string>
+    <string name="events_title">Events</string>
+    <string name="guests_title">Guests</string>
+    <string name="maps_title">Map</string>
+    <string name="type_name">Type name here...</string>
+    <string name="type_palindrome">Type text palindrome</string>
+    <string name="search">Search</string>
+    <string name="list">List</string>
+    <string name="required">%1$s/%2$s</string>
+</resources>
